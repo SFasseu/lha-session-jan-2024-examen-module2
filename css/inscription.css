@@ -1,0 +1,15 @@
+.container{
+    margin: auto;
+    padding: 0;
+}
+
+#signup{
+    width: 490px;
+}
+
+#signup fieldset{
+    border-radius: 8px;
+    border: 1px solid white;
+    box-shadow: 0 0 7px rgb(130, 125, 125);
+    padding: 15px;
+}
