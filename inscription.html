@@ -14,29 +14,33 @@
     <div class="container">
         <form action="#" id="signup" method="post">
             <fieldset>
-                <legend>vos coordonnées</legend>
+                <legend>Vos coordonnées</legend>
                 <div class="form-group">
-                    <label class="form-label" for="last_name">nom</label>
+                    <label class="form-label" for="last_name">Nom :</label>
                     <input class="form-input" placeholder="votre nom" type="text" name="last_name" id="last_name">
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="first_name">prenom</label>
+                    <label class="form-label" for="first_name">Prenom :</label>
                     <input class="form-input" placeholder="votre prénom" type="text" name="first_name" id="first_name">
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="birthdate">date de naissance</label>
+                    <label class="form-label" for="birthdate">Date de naissance :</label>
                     <input class="form-input" type="date" name="birthdate" id="birthdate">
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="email">Mail</label>
+                    <label class="form-label" for="email">Mail :</label>
                     <input class="form-input" type="email" name="email" id="email">
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="web_site">votre site</label>
+                    <label class="form-label" for="web_site">Votre site :</label>
                     <input class="form-input" type="url" name="web_site" id="web_site">
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="gender">Genre</label>
+                    <label class="form-label" for="password">Mot de passe :</label>
+                    <input class="form-input" type="password" name="password" id="password">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="gender">Genre :</label>
                     <div class="form-radio-group">
                         <input type="radio" name="gender" id="male" value="homme">
                         <label for="male">Homme</label>
@@ -45,8 +49,8 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="country">pays</label>
-                    <select name="country" id="country">
+                    <label class="form-label" for="country">Pays :</label>
+                    <select name="country" id="country" class="form-input">
                         <option value="">Votre pays</option>
                         <optgroup label="Afrique">
                             <option value="Cameroun">Cameroun</option>
@@ -60,27 +64,27 @@
 
             </fieldset>
             <fieldset>
-                <legend>vos formations</legend>
+                <legend>Vos formations</legend>
                 <div class="form-checkbox-group">
-                    <input type="checkbox" name="html" id="html">
-                    <label for="html">formation en <span class="capitalize">html5</span></label>
+                    <input type="checkbox" name="html" id="html" value="html">
+                    <label for="html">Formation en <span class="capitalize">html5</span></label>
                 </div>
                 <div class="form-checkbox-group">
-                    <input type="checkbox" name="css" id="css">
-                    <label for="css">formation en <span class="capitalize">css3</span></label>
+                    <input type="checkbox" name="css" id="css" value="css">
+                    <label for="css">Formation en <span class="capitalize">css3</span></label>
                 </div>
                 <div class="form-checkbox-group">
-                    <input type="checkbox" name="js" id="js">
-                    <label for="js">formation en <span class="capitalize">js</span></label>
+                    <input type="checkbox" name="js" id="js" value="js">
+                    <label for="js">Formation en <span class="capitalize">js</span></label>
                 </div>
-                <textarea name="comment" placeholder="Décrivez vos besoins en formation" id="comment"></textarea>
+                <textarea class="form-textarea" onfocus="textareaFocus(this);" name="comment" placeholder="Décrivez vos besoins en formation" id="comment" cols="50"  rows="5"></textarea>
             </fieldset>
             <fieldset>
                 <legend>Envoyez nous votre photo</legend>
                 <input type="file" name="picture" id="picture">
                 <div class="form-button-group">
-                    <input type="reset" value="effacer">
-                    <input type="submit" value="envoyer">
+                    <input class="form-button" type="reset" value="effacer">
+                    <input onclick="verif();" class="form-button" type="submit" value="envoyer">
                 </div>
             </fieldset>
         </form>
